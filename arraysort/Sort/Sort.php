@@ -1,9 +1,15 @@
 <?php
+//定义命名空间
 namespace Liufen;
 
+//建立算法类
 class Sort
 {
-    //冒泡排序
+    /**
+     * 冒泡排序
+     * 1：从第一个数字开始，两两对比，交换直到最后一个数。
+     * 2：重复1操作，直至排序完成。
+     * */
     public function bubbleSort($array)
     {
 
@@ -20,7 +26,11 @@ class Sort
         return $array;
     }
 
-    //木桶排序
+    /**
+     * 木桶排序
+     * 1；找出数组中最小和最大值，设置空木桶。
+     * 2：对比空木桶与数组中的值，将数值分别放入对应的桶中。
+     * **/
     public function bucketSort($array)
     {
         $count = count($array);
@@ -45,7 +55,10 @@ class Sort
         }
         return $result;
     }
-    //插入排序
+    /**
+     * 插入排序
+     * 以第二个数为基准，依次与前一个数对比，插到符合要求的数之间。
+     * */
     public function insertSort($array)
     {
         $count = count($array);
@@ -61,7 +74,12 @@ class Sort
         }
         return $array;
     }
-    //快速排序
+    /**
+     * 快速排序
+     * 1，以第一个数为基准，后面的数依次与它比较。
+     * 2，小的放在第一个数左边，大的放在第一个数右边。
+     * 3，分为左右两个数组，再次执行1，2步。直至排序完成。
+     * */
     public function quickSort($array)
     {
         $count = count($array);
@@ -69,7 +87,7 @@ class Sort
             $k = $array[0];
             $x = array();
             $y = array();
-            for ($i = 1; $i < $count; $i++) {
+            for ($i = 1; $i < $cnt; $i++) {
                 if ($array[$i] <= $k) {
                     $x[] = $array[$i];
                 } elseif ($array[$i] > $k) {
@@ -84,7 +102,11 @@ class Sort
             return $array;
         }
     }
-    //选择排序
+    /**
+     * 选择排序
+     * 1：首先假定第一个数是数组中的最小值。
+     * 2：然后与后面的数依次比较，比假定的最小值则交换
+     * */
     public function selectionSort($array)
     {
         $count = count($array);

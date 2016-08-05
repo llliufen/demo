@@ -1,6 +1,9 @@
 <?php
+/**
+ * 1.引入算法类。
+ * 2.新建变量调用算法类。
+ */
 require "bubblesort.php";
-
 $sort  = new \Liufen\Sort();
 $array = array(5, 11, 6, 4, 4564, 10, 45, 412);
 var_dump($sort->quickSort($array)); //调用快速排序方法

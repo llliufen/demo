@@ -1,6 +1,6 @@
 
 
-PHP常用的5中排序算法
+封装一个算法类，包括五种排序：
 
  1.快速排序->quickSort()    
 
@@ -12,15 +12,5 @@ PHP常用的5中排序算法
 
  5.木桶排序->bucketSort()    
 
-排序算法类:Sort
-
-测试数组排序的功能:testsort.php
-
-测试方法：
-
- 1.$sort = new Liufen\Sort();  //获取容器
-
- 2.$sort = $sort->bubbleSort($array); //
-
- 3.var_dump($array);//将获取到的结果输出
+新建一个testsort.php测试文件，调用五种算法。
 
